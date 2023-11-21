@@ -6,7 +6,7 @@
 /*   By: hidriouc <hidriouc@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/01 13:58:07 by hidriouc          #+#    #+#             */
-/*   Updated: 2023/11/15 15:07:39 by hidriouc         ###   ########.fr       */
+/*   Updated: 2023/11/16 15:40:19 by hidriouc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 void	*ft_memset(void *b, int c, size_t lent)
 {
-	unsigned char	*ptr;
+	size_t	i;
 
-	ptr = (unsigned char *)b;
-	while (lent > 0)
+	i = 0;
+	while (lent > i)
 	{
-		*ptr = (unsigned char)c;
-		ptr++;
-		lent--;
+		*((unsigned char *)b + i) = (unsigned char)c;
+		i++;
 	}
 	return (b);
 }
